@@ -1,0 +1,9 @@
+nav{
+    background-color: yellow;
+    margin: 12;
+    padding: 12px 12px;
+    text-align: center;
+}
+nav>a{
+    margin: 20px;
+}

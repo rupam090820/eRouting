@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'CompRouting'`, () => {
+  it(`should have as title 'eRoouting'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('CompRouting');
+    expect(app.title).toEqual('eRoouting');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('CompRouting app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('eRoouting app is running!');
   });
 });

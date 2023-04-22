@@ -1,0 +1,43 @@
+<div class="card">
+    <ng-container *ngIf="studentList!=0 then std else sea"></ng-container>
+    <ng-template #std>
+        <div class="card">
+            <header class="card-header">
+                <h3>Student Info:</h3>
+            </header>
+            <table class="table table-hover table-bordered">
+                <tr>
+                    <th>Student Name</th>
+                    <th>Student Age</th>
+                    <th>Course Name</th>
+                </tr>
+                <tr *ngFor="let s of studentList">
+                    <td>{{s.std_name}}</td>
+                    <td>{{s.age}}</td>
+                    <td *ngFor="let c of s.course">{{c.course_name}}</td>
+                </tr>
+            </table>
+        </div>
+
+    </ng-template>
+    <ng-template #sea>
+
+        <div class="card">
+
+            <div class="card-body">
+
+                <h2>Student Info : </h2>
+                <h3>Sudent Name:{{studentData.std_name}}</h3>
+                <h3>Student Age:{{studentData.age}}</h3>
+            </div>
+            <section>
+                <a href="" [routerLink]="['/course']"><button class="btn btn-sm btn-primary">Back</button></a>
+            </section>
+        </div>
+
+    </ng-template>
+
+
+
+
+</div>

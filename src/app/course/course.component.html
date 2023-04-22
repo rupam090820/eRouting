@@ -1,0 +1,13 @@
+<div class="card">
+    <header class="card-header">
+        <h3>|Course List|</h3>
+    </header>
+    <div class="card-body">
+        <ul class="list-group"  *ngFor="let std of studentList">
+            <li class="list-group-item" *ngFor="let s of std"  (click)="select(s.std_id)">
+                {{s.course_name}}
+                <span class="badge badge-pills badge-success float-right">{{s.price|currency:'INR'}}</span>
+            </li>
+        </ul>
+    </div>
+</div>
